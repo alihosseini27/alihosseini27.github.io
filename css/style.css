@@ -68,16 +68,19 @@ body {
         transform: translateX(100px);
         border: 0px;
         color: var(--s-bgc);
+        font-size: 0px;
     }
     50% {
         transform: translateX(250px);
         border: 2px dotted darkcyan;
         color: var(--navc);
+        font-size: 1.5rem;
     }
     100% {
         transform: translateX(600px);
         border: 0px;
         color: var(--s-bgc);
+        font-size: 0px;
     }
 }
 /* Menu */
