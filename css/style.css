@@ -89,19 +89,27 @@ body {
     justify-content: end;
     align-items: center;
 }
+#hamberger {
+    display: none;
+}
 #menu {
     display: flex;
+}
+#menu span {
+    display: none;
 }
 #menu li {
     list-style: none;
     padding: 1.5rem;
     margin:0 25px;
+    transition: all 1s;
 }
 #menu li:hover {
     background-color: var(--f-bgc , #eee);
     box-shadow: 5px 5px 10px var(--f-c);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    transition: all 1s;
 }
 #menu li a {
     text-decoration: none;
@@ -112,14 +120,16 @@ body {
 /* About */
 #about {
     background-color: var(--s-c);
+    width: 100%;
     padding: 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: row;
 }
 /* Image */
 .about-image img {
-    width: 575px;
+    width: 75%;
     height: 425px;
     border-radius: 1.5rem;
 }
@@ -128,7 +138,7 @@ body {
 }
 /* Text */
 .about-text {
-    width: 575px;
+    width: 75%;
     height: 425px;
     background-color: var(--t-bgc);
     border-radius: 1.5rem;
@@ -146,6 +156,7 @@ body {
 /* Works */
 #works {
     height: 550px;
+    width: 100%;
     border: 5px groove gray;
     padding: 5px;
     display: flex;
@@ -156,25 +167,51 @@ body {
     display: flex;
     flex-direction: column;
     width: 600px;
-    height: 500px;
+    height: 420px;
     border: 2px double slategray;
     border-radius: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+#work {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* video */
-.work video {
-    width: 596px;
-    height: 380px;
+#work video {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 /* Title and Download */
-.work a {
-    font-size: 25px;
+#work a {
     text-decoration: none;
-    background-color: var(--s-bgc);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;  
+    display: none;
+    transition: all 1s;
+}
+#work:hover a {
+    height: 50%;
+    font-size: 25px;
     color: var(--s-c);
-    padding: 5px;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: center;
+    background-color: rgba( 0, 173, 181, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    transition: all 1s;
 }
 /* Description */
 .work p {
@@ -183,6 +220,7 @@ body {
     color: var(--f-c);
     padding: 5px;
     margin: 10px;
+    width: 100%;
     border-radius: 10px;
     text-align: center;
 }

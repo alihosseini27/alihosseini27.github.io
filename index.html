@@ -11,7 +11,8 @@
     <title>My resume</title>
     <link rel="shortcut icon" href="icon/favicon.jpg" type="Video/x-icon">
     <!-- Css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">
 </head>
 <body dir="rtl">
     <!-- Loader -->
@@ -26,6 +27,7 @@
         </div>
         <!-- Menu -->
         <div class="menu">
+            <img src="icon/Hamburger_icon.png" alt="Hamburger icon" id="hamberger">
             <ul id="menu">
                 <li><a href="#about">درباره</a></li>
                 <li><a href="#works">سابقه</a></li>
@@ -49,18 +51,22 @@
     <!-- Works -->
     <section id="works">
         <div class="work">
-            <!-- Video -->
-            <video src="videos/work1.mp4" autoplay muted loop></video>
-            <!-- Title and Download -->
-            <a href="works/Autocomplete search suggestions.zip" title="Download"><span>Autocomplete search suggestions</span></a>
+            <div id="work">
+                <!-- Video -->
+                <video src="videos/work1.mp4" autoplay muted loop></video>
+                <!-- Title and Download -->
+                <a href="works/Autocomplete search suggestions.zip" title="Download"><span>Autocomplete search suggestions</span><span>(: Click to download</span></a>
+            </div>
             <!-- Description -->
             <p>ایجاد پیشنهاد برای جست و جوها</p>
         </div>
         <div class="work">
-            <!-- Video -->
-            <video src="videos/work2.mp4" autoplay muted loop></video>
-            <!-- Title and Download -->
-            <a href="works/Key code.zip" title="Download"><span>Key code</span></a>
+            <div id="work">
+                <!-- Video -->
+                <video src="videos/work2.mp4" autoplay muted loop></video>
+                <!-- Title and Download -->
+                <a href="works/Key code.zip" title="Download"><span>Key code</span><span>(: Click to download</span></a>
+            </div>
             <!-- Description -->
             <p>دادن اطلاعات درباره کلید با رویداد های دکمه event در تابع</p>
         </div>
@@ -91,6 +97,7 @@
         ↑
     </div>
     <!-- JavaScript -->
-    <script src="js/script.js" async></script>
+    <script src="js/script.js"></script>
+    <script src="js/mobile.js"></script>
 </body>
 </html>
