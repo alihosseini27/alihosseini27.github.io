@@ -22,7 +22,7 @@ body {
     width:  100%;
     height: 100%;
     background-color: white;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
@@ -33,8 +33,8 @@ body {
     overflow: hidden;
 }
 #preloader {
-    width:  500px;
-    height: 500px;
+    width:  300px;
+    height: 300px;
     border: 3px solid gainsboro;
     border-radius: 50%;
 }
@@ -189,7 +189,7 @@ body {
     z-index: 20;  
     display: none;
     height: 50%;
-    font-size: 25px;
+    font-size: 15px;
     color: var(--s-c);
     background-color: rgba( 0, 173, 181, 0.3);
     display: flex;
@@ -198,6 +198,7 @@ body {
     justify-content: center;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    text-align: center;
     transition: all 1s;
 }
 #work a:hover {
