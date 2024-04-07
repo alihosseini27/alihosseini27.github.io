@@ -20,7 +20,6 @@ window.addEventListener("focus", function () {
 let social = $.querySelector(".social");
 let networks = $.querySelectorAll(".sni");
 let information = $.querySelector(".information");
-$.body.dataset.title
 networks.forEach(function (network) {
     network.addEventListener("mouseover", function (event) {
         information.style.display = "grid";

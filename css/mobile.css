@@ -16,6 +16,7 @@
 body {
     background-color: var(--f-bgc, #eee);
     color: var(--bodyc, #000000);
+    overflow-x: hidden;
 }
 /* Loader */
 #preloader-container{
@@ -70,7 +71,8 @@ body {
     align-items: center;
 }
 #hamberger {
-    display: block; 
+    cursor: pointer;
+    display: flex; 
     position: absolute;
     width: 60px;
     height: 60px;
@@ -118,6 +120,9 @@ body {
     flex-direction: column;
 }
 /* Image */
+.about-image {
+    margin-bottom: 20px;
+}
 .about-image img {
     width: 99%;
     height: 225px;
@@ -132,6 +137,7 @@ body {
     height: 425px;
     background-color: var(--t-bgc);
     border-radius: 1.5rem;
+    overflow-y: scroll;
 }
 .about-text:hover {
     box-shadow: 5px 5px 10px var(--t-c);
@@ -144,10 +150,19 @@ body {
     padding: 20px;
 }
 /* Works */
-#works {
-    width: 100%;
+#works{
     border: 5px groove gray;
     padding: 5px;
+    width: 100%;
+}
+.works-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+.works {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -157,11 +172,13 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: fit-content;
     height: 330px;
     border: 2px double slategray;
     border-radius: 1.5rem;
     justify-content: center;
     align-items: center;
+    margin: 20px 0;
 }
 #work {
     position: relative;
@@ -180,7 +197,7 @@ body {
     z-index: 10;
 }
 /* Title and Download */
-#work a {
+#work span {
     text-decoration: none;
     position: absolute;
     bottom: 0;
@@ -189,7 +206,7 @@ body {
     z-index: 20;  
     display: none;
     height: 50%;
-    font-size: 15px;
+    font-size: 20px;
     color: var(--s-c);
     background-color: rgba( 0, 173, 181, 0.3);
     display: flex;
@@ -201,7 +218,7 @@ body {
     text-align: center;
     transition: all 1s;
 }
-#work a:hover {
+#work span:hover {
     display: none;
     transition: all 1s;
 }
@@ -255,7 +272,7 @@ body {
 }
 .information h1 {
     padding: 5px 10px;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     justify-self: center;
     background-color: var(--s-bgc);
@@ -264,7 +281,7 @@ body {
 }
 .information h2 {
     padding: 5px 10px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     background-color: var(--f-bgc);
     border-radius: 50px;
@@ -272,12 +289,11 @@ body {
 }
 /* Footer */
 .footer {
-    height: 60px;
     background-color: var(--fth-bgc);
     color: var(--f-bgc);
     text-align: center;
     align-items: center;
-    padding: 15px;
+    padding: 15px 0;
     font-size: 15px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;

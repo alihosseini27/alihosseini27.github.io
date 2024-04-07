@@ -16,6 +16,7 @@
 body {
     background-color: var(--f-bgc, #eee);
     color: var(--bodyc, #000000);
+    overflow-x: hidden;
 }
 /* Loader */
 #preloader-container{
@@ -142,6 +143,7 @@ body {
     height: 425px;
     background-color: var(--t-bgc);
     border-radius: 1.5rem;
+    overflow-y: scroll;
 }
 .about-text:hover {
     box-shadow: 5px 5px 10px var(--t-c);
@@ -155,13 +157,22 @@ body {
 }
 /* Works */
 #works {
-    height: 550px;
-    width: 100%;
     border: 5px groove gray;
     padding: 5px;
+    width: 100%;
+}
+.works-title {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 20px 0;
+}
+.works {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
 }
 .work {
     display: flex;
@@ -190,7 +201,7 @@ body {
     z-index: 10;
 }
 /* Title and Download */
-#work a {
+#work span {
     text-decoration: none;
     position: absolute;
     bottom: 0;
@@ -200,7 +211,7 @@ body {
     display: none;
     transition: all 1s;
 }
-#work:hover a {
+#work:hover span {
     height: 50%;
     font-size: 25px;
     color: var(--s-c);
@@ -209,6 +220,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     transition: all 1s;
