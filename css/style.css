@@ -135,7 +135,7 @@ body {
 }
 .about-image img {
     width: 100%;
-    height: 425px;
+    height: 450px;
     border-radius: 1.5rem;
 }
 .about-image img:hover {
@@ -145,7 +145,7 @@ body {
 .about-text {
     width: 55%;
     height: auto;
-    max-height: 425px;
+    max-height: 440px;
     background-color: var(--t-bgc);
     border-radius: 1.5rem;
     overflow-y: scroll;
